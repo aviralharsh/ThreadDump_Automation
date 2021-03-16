@@ -6,7 +6,7 @@ spec:
   - name: jnlp
   - command:
     - cat
-    image: asia.gcr.io/nonprod-utility-233414/builders/kubectl:0.1.4
+    image: <img_path>
     name: kubectl
     tty: true
   serviceAccountName: default
