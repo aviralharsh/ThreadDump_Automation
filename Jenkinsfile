@@ -1,4 +1,4 @@
-def env='preprod'
+def env='<env-name>'
 
 pipeline {
   agent {
@@ -21,7 +21,7 @@ pipeline {
           withCredentials([file(credentialsId: 'gke-qa1-cluster-serviceaccount', variable: 'SERVICE_ACCOUNT')]) {
             sh("gcloud auth activate-service-account --key-file=${SERVICE_ACCOUNT}")
                   }
-            sh ("gcloud container clusters get-credentials gke-preprod-sg --region asia-southeast1 --project gke-preprod --internal-ip")
+            sh ("gcloud container clusters get-credentials <cluster_name> --region asia-southeast1 --project <Project_ID> --internal-ip")
         }
       }
     }
