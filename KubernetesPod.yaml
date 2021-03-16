@@ -1,0 +1,12 @@
+apiVersion: v1
+component: ci
+kind: Pod
+spec:
+  containers:
+  - name: jnlp
+  - command:
+    - cat
+    image: asia.gcr.io/nonprod-utility-233414/builders/kubectl:0.1.4
+    name: kubectl
+    tty: true
+  serviceAccountName: default

@@ -1,0 +1,6 @@
+# Use the following command to find NameSpace :
+#     kubectl get po -A | grep <POD_NAME> | awk '{print $1}'    
+
+podDetails:
+  - name: bliprime-service-5d7cddfddd-k7kgq
+    namespace: vod
